@@ -1,8 +1,8 @@
 
 {
-    "max_open_trades": 2,
+    "max_open_trades": 8,
     "stake_currency": "USDT",
-    "stake_amount": 500,
+    "stake_amount": 100,
     "tradable_balance_ratio": 0.99,
     "fiat_display_currency": "USD",
     "dry_run": true,
@@ -37,15 +37,14 @@
         "secret": "egHSW0JPUePEAqLQ4pA7uMMDm_vhspBFtpnZ-Fhi",
         "ccxt_config": {},
         "ccxt_async_config": {},
-        "pair_whitelist": [
-        ],
+        "pair_whitelist": ["MATIC/USD", "USDT/USD", "SUSHI/USD", "DOGE/USD", "GRT/USD", "SUSHI/USDT", "TRX/USD", "SHIB/USD", "DOGE/USDT", "ALGO/USD", "BAT/USD", "TRX/USDT", "DAI/USD", "DAI/USDT", "ALGO/USDT", "KSHIB/USD", "CUSDT/USD", "BRZ/USD", "GBP/USD", "BRZ/USDT", "EUR/USD", "AUD/USD", "CAD/USD", "CUSDT/USDT"],
         "pair_blacklist": [
         ]
     },
     "pairlists": [
         {
-            "method": "VolumePairList",
-            "number_assets": 30,
+            "method": "StaticPairList",
+            "number_assets": 20,
             "sort_key": "quoteVolume",
             "min_value": 0,
             "refresh_period": 1800
