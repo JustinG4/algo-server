@@ -16,6 +16,13 @@ import matplotlib.animation as animation
 from matplotlib import style
 import numpy as np
 import matplotlib.pyplot as plt
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 key = 'e262108f66dbb4f0839dee8f75476639'
 b64secret = 'XUY9tWRDCKnjYoifihN9wgq4St8EKYDzbdtIliktREiEmxV7jvdEUNaQHdSd9xkLAnF01GbV+0/xP+gykNozJw=='
@@ -264,5 +271,27 @@ def animate(i):
     plt.show()
 
 
+def dothisshit(input_price):
+    url = 'https://ftx.us/markets'
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    driver = webdriver.Chrome(options=chrome_options, executable_path=ChromeDriverManager().install())
+    driver.get(url)
 
+    symbols = {}
+    tickers = driver.find_elements_by_css_selector('tr')
+    price = 0.0
+    name = ''
+    for ticker in tickers:
+        words = (ticker.text).split()
 
+        if '/USD' in words[0]:
+            name = words[0]
+            price = float(words[-2].replace(',', ''))
+
+            if price < input_price:
+                symbols[name] = price
+
+    print(symbols)
+    print(list(symbols.keys()))
+    return symbols
