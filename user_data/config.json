@@ -37,7 +37,7 @@
         "secret": "egHSW0JPUePEAqLQ4pA7uMMDm_vhspBFtpnZ-Fhi",
         "ccxt_config": {},
         "ccxt_async_config": {},
-        "pair_whitelist": ["MATIC/USD", "USDT/USD", "SUSHI/USD", "DOGE/USD", "GRT/USD", "SUSHI/USDT", "TRX/USD", "SHIB/USD", "DOGE/USDT", "ALGO/USD", "BAT/USD", "TRX/USDT", "DAI/USD", "DAI/USDT", "ALGO/USDT", "KSHIB/USD", "CUSDT/USD", "BRZ/USD", "GBP/USD", "BRZ/USDT", "EUR/USD", "AUD/USD", "CAD/USD", "CUSDT/USDT"],
+        "pair_whitelist": ["SUSHI/USDT", "DOGE/USDT", "TRX/USDT", "DAI/USDT", "ALGO/USDT", "BRZ/USDT", "CUSDT/USDT"],
         "pair_blacklist": [
         ]
     },
