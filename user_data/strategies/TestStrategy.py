@@ -22,13 +22,15 @@ class TestStrategy(IStrategy):
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
-        "0": 0.02
+        "60": 0.01,
+        "30": 0.01,
+        "0": 0.01
     }
     # Optimal stoploss designed for the strategy
     # This attribute will be overridden if the config file contains "stoploss"
     # should not be below 3% loss
 
-    stoploss = -0.1
+    stoploss = -0.03
     # Optimal timeframe for the strategy
     # the shorter the better
     timeframe = '1m'
