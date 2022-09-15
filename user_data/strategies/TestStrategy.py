@@ -30,7 +30,7 @@ class TestStrategy(IStrategy):
     # This attribute will be overridden if the config file contains "stoploss"
     # should not be below 3% loss
 
-    stoploss = -0.04
+    stoploss = -0.035
     # Optimal timeframe for the strategy
     # the shorter the better
     timeframe = '1m'
